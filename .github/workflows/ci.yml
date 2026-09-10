@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  frontend:
+    name: Frontend (typecheck + build)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps
+      - name: Typecheck
+        run: npm run typecheck
+      - name: Build
+        run: npm run build
+
+  backend:
+    name: Backend (syntax + API smoke)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps
+      - name: Syntax check
+        run: |
+          set -e
+          for f in $(find apps/backend/src -name '*.js'); do
+            node --check "$f"
+          done
+      - name: API smoke test
+        run: |
+          node apps/backend/src/index.js &
+          sleep 6
+          curl -fsS http://localhost:3001/api/v1/health
+          curl -fsS "http://localhost:3001/api/v1/vaults?limit=2"
+          kill %1

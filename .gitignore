@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Rust / Soroban
+target/
+contracts/soroban/target/
+.wasm
+*.wasm
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+*.err.log
+
+# Runtime
+coverage/
+artifacts/
+cache/
+.cache/
+.vite/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

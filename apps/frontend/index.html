@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" class="dark" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LumenVault - Stellar Vault Aggregator</title>
+    <meta name="description" content="Deposit assets into curated vaults on the Stellar network and earn optimized yields with Soroban smart contracts" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('lumen-theme');
+          if (t === 'light' || t === 'dark') {
+            document.documentElement.classList.toggle('dark', t === 'dark');
+            document.documentElement.setAttribute('data-theme', t);
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

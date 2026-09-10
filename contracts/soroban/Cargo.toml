@@ -1,0 +1,29 @@
+[workspace]
+resolver = "2"
+members = [
+  "contracts/vault",
+  "contracts/vault_factory",
+  "contracts/strategy_lending",
+  "contracts/risk_manager",
+]
+
+[workspace.package]
+edition = "2021"
+version = "1.0.0"
+authors = ["LumenVault Protocol"]
+license = "Apache-2.0"
+
+[workspace.dependencies]
+soroban-sdk = "21.0.0"
+
+[profile.release]
+opt-level = 3
+overflow-checks = true
+debug-assertions = false
+strip = true
+lto = true
+codegen-units = 1
+
+[profile.release-with-logs]
+inherits = "release"
+debug-assertions = true

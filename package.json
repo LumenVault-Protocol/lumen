@@ -1,0 +1,25 @@
+{
+  "name": "lumenvault-protocol",
+  "version": "1.0.0",
+  "description": "LumenVault — Stellar-native DeFi vault aggregator (Soroban)",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -n backend,frontend -c blue,magenta \"npm:dev:backend\" \"npm:dev:frontend\"",
+    "dev:backend": "npm run dev -w @lumenvault/backend",
+    "dev:frontend": "npm run dev -w @lumenvault/frontend",
+    "build": "npm run build -w @lumenvault/frontend",
+    "start": "npm run start -w @lumenvault/backend",
+    "typecheck": "npm run typecheck -w @lumenvault/frontend",
+    "deploy:soroban": "node contracts/soroban/scripts/deploy-soroban.js"
+  },
+  "dependencies": {
+    "@stellar/stellar-sdk": "^17.0.1",
+    "concurrently": "^8.2.2"
+  },
+  "allowScripts": {
+    "esbuild@0.21.5": true
+  }
+}
