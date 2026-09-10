@@ -1,5 +1,14 @@
 # LumenVault Protocol
 
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![build](https://github.com/LumenVault-Protocol/lumen/actions/workflows/ci.yml/badge.svg)](https://github.com/LumenVault-Protocol/lumen/actions/workflows/ci.yml)
+[![last commit](https://img.shields.io/github/last-commit/LumenVault-Protocol/lumen)](https://github.com/LumenVault-Protocol/lumen)
+[![node](https://img.shields.io/badge/node-%3E%3D18-339933.svg?logo=node.js&logoColor=white)](package.json)
+[![typescript](https://img.shields.io/badge/typescript-5.4-3178C6.svg?logo=typescript&logoColor=white)](apps/frontend/package.json)
+[![rust](https://img.shields.io/badge/rust-2021%20edition-DEA584.svg?logo=rust&logoColor=white)](contracts/soroban/Cargo.toml)
+[![soroban](https://img.shields.io/badge/Soroban-21.0.0-00CB8D.svg)](contracts/soroban/Cargo.toml)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+
 > 100% Stellar-native DeFi vault aggregator. Vaults, liquidity strategies, and
 > risk management are expressed as **Soroban smart contracts** (Rust).
 
