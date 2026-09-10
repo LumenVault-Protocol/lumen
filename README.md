@@ -195,6 +195,15 @@ curl "http://localhost:3001/api/v1/vaults?sort=tvl&limit=4"
 
 ---
 
+## Contributing
+
+Bug reports and feature requests use the templates in `.github/` — see
+[`CONTRIBUTING.md`](CONTRIBUTING.md) for the workflow and conventions.
+
+## License
+
+Released under the [MIT License](LICENSE).
+
 ## Disclaimer
 
 Demo/prototype software. Contracts are not audited. Nothing here is financial
