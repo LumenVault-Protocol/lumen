@@ -1,7 +1,7 @@
 # LumenVault Soroban Contracts
 
 100% Stellar-native smart contracts for the LumenVault Protocol, written in
-Rust for **Soroban** (Stellar's smart-contract platform). No EVM. No Solidity.
+Rust for **Soroban** (Stellar's smart-contract platform).
 
 ## Contracts
 

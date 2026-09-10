@@ -1,8 +1,7 @@
 # LumenVault Protocol
 
 > 100% Stellar-native DeFi vault aggregator. Vaults, liquidity strategies, and
-> risk management are expressed as **Soroban smart contracts** (Rust). No EVM. No
-> Solidity.
+> risk management are expressed as **Soroban smart contracts** (Rust).
 
 LumenVault is a non-custodial yield platform where users deposit Stellar assets
 (USDC, USDT, XLM, RLUSD) into curated, auto-compounding vaults. A factory deploys
